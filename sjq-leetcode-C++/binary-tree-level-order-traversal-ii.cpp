@@ -16,7 +16,8 @@ public:
         tree.push(root);
         while(!tree.empty()){
             vector<int> temp;
-            for(int i=0; i< tree.size(); i++){
+            int size = tree.size();
+            for(int i=0; i< size; ++i){
                 TreeNode* t = tree.front();
                 temp.push_back(t->val);
                 if(t->left) tree.push(t->left);
